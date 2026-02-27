@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BattleNova Ops Operators — Meet the elite tactical operators ready for war.">
+    <title>Operators — BattleNova Ops</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+
+<body class="animated-bg">
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="page-transition" id="pageTransition"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">BattleNova</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="operators.html" class="nav-link active">Operators</a></li>
+            <li><a href="arsenal.html" class="nav-link">Arsenal</a></li>
+        </ul>
+        <div class="nav-toggle" id="navToggle">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero hero-operators">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="section-label">// CHOOSE YOUR FIGHTER</span>
+            <h1 class="section-title" style="font-size:clamp(2.5rem,6vw,5rem);">ELITE <span
+                    class="highlight">OPERATORS</span></h1>
+            <p class="section-desc">Six battle-hardened warriors. Each with unique lethal abilities. Select your
+                operative and dominate the warzone.</p>
+        </div>
+    </section>
+
+    <!-- Neon Divider -->
+    <div class="neon-divider"></div>
+
+    <!-- ===================== OPERATORS GRID ===================== -->
+    <section class="section">
+        <div class="operators-grid">
+
+            <!-- OPERATOR 1 — VANGUARD -->
+            <div class="operator-card reveal">
+                <div class="operator-img-wrapper">
+                    <span class="operator-role">Assault</span>
+                    <div class="operator-visual">
+                        <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Armored soldier silhouette -->
+                            <defs>
+                                <linearGradient id="opGrad1" x1="60" y1="0" x2="140" y2="280">
+                                    <stop stop-color="#ff1a1a" stop-opacity="0.9" />
+                                    <stop offset="0.5" stop-color="#cc0000" stop-opacity="0.7" />
+                                    <stop offset="1" stop-color="#330000" stop-opacity="0.5" />
+                                </linearGradient>
+                                <filter id="opGlow1">
+                                    <feGaussianBlur stdDeviation="3" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Helmet -->
+                            <path d="M80 30 Q100 5 120 30 L125 55 Q100 60 75 55 Z" fill="url(#opGrad1)"
+                                filter="url(#opGlow1)" />
+                            <!-- Visor -->
+                            <rect x="82" y="38" width="36" height="8" rx="2" fill="#ffaa00" opacity="0.9" />
+                            <!-- Neck -->
+                            <rect x="90" y="55" width="20" height="12" fill="url(#opGrad1)" />
+                            <!-- Torso armor -->
+                            <path
+                                d="M65 67 L60 130 Q60 145 70 148 L85 155 L100 158 L115 155 L130 148 Q140 145 140 130 L135 67 Q100 60 65 67Z"
+                                fill="url(#opGrad1)" filter="url(#opGlow1)" />
+                            <!-- Chest plate detail -->
+                            <path d="M80 80 L100 75 L120 80 L118 110 L100 115 L82 110 Z" fill="#1a0000" stroke="#ff1a1a"
+                                stroke-width="1" opacity="0.6" />
+                            <!-- Shoulder pads -->
+                            <ellipse cx="58" cy="80" rx="18" ry="12" fill="url(#opGrad1)" />
+                            <ellipse cx="142" cy="80" rx="18" ry="12" fill="url(#opGrad1)" />
+                            <!-- Arms -->
+                            <path d="M40 82 L35 140 L50 142 L58 90 Z" fill="url(#opGrad1)" />
+                            <path d="M160 82 L165 140 L150 142 L142 90 Z" fill="url(#opGrad1)" />
+                            <!-- Weapon (rifle) -->
+                            <rect x="155" y="105" width="40" height="6" rx="1" fill="#444"
+                                transform="rotate(-15, 155, 105)" />
+                            <rect x="160" y="95" width="8" height="18" rx="1" fill="#333"
+                                transform="rotate(-15, 160, 95)" />
+                            <!-- Legs -->
+                            <path d="M70 148 L65 220 L58 245 L82 245 L85 220 L95 158 Z" fill="url(#opGrad1)" />
+                            <path d="M105 158 L115 220 L118 245 L142 245 L135 220 L130 148 Z" fill="url(#opGrad1)" />
+                            <!-- Boots -->
+                            <path d="M55 240 L85 240 L85 260 Q70 265 55 260 Z" fill="#1a0000" />
+                            <path d="M115 240 L145 240 L145 260 Q130 265 115 260 Z" fill="#1a0000" />
+                            <!-- Glowing elements -->
+                            <circle cx="100" cy="90" r="3" fill="#ff1a1a" opacity="0.9">
+                                <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                            <line x1="80" y1="130" x2="80" y2="145" stroke="#ffaa00" stroke-width="1" opacity="0.6" />
+                            <line x1="120" y1="130" x2="120" y2="145" stroke="#ffaa00" stroke-width="1" opacity="0.6" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="operator-info">
+                    <h3 class="operator-name">VANGUARD</h3>
+                    <p class="operator-codename">// CALLSIGN: V-01</p>
+                    <div class="operator-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Attack</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="92"></div>
+                            </div>
+                            <span class="stat-value">92</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Defense</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="78"></div>
+                            </div>
+                            <span class="stat-value">78</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Speed</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="65"></div>
+                            </div>
+                            <span class="stat-value">65</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Ability</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="80"></div>
+                            </div>
+                            <span class="stat-value">80</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OPERATOR 2 — SPECTRE -->
+            <div class="operator-card reveal">
+                <div class="operator-img-wrapper">
+                    <span class="operator-role">Sniper</span>
+                    <div class="operator-visual">
+                        <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="opGrad2" x1="60" y1="0" x2="140" y2="280">
+                                    <stop stop-color="#ffaa00" stop-opacity="0.8" />
+                                    <stop offset="0.5" stop-color="#886600" stop-opacity="0.6" />
+                                    <stop offset="1" stop-color="#332200" stop-opacity="0.4" />
+                                </linearGradient>
+                                <filter id="opGlow2">
+                                    <feGaussianBlur stdDeviation="3" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Hooded helmet -->
+                            <path d="M75 25 Q100 0 125 25 L130 50 Q115 55 100 58 Q85 55 70 50 Z" fill="url(#opGrad2)"
+                                filter="url(#opGlow2)" />
+                            <path d="M78 30 L122 30 L120 48 Q100 52 80 48 Z" fill="#1a1100" opacity="0.7" />
+                            <!-- Visor -->
+                            <rect x="84" y="36" width="32" height="6" rx="3" fill="#ffaa00" opacity="0.95" />
+                            <!-- Slimmer torso -->
+                            <path
+                                d="M72 58 L68 130 Q68 142 78 145 L90 150 L100 152 L110 150 L122 145 Q132 142 132 130 L128 58 Q100 52 72 58Z"
+                                fill="url(#opGrad2)" />
+                            <!-- Tactical vest lines -->
+                            <line x1="90" y1="70" x2="90" y2="140" stroke="#ffaa00" stroke-width="0.5" opacity="0.4" />
+                            <line x1="110" y1="70" x2="110" y2="140" stroke="#ffaa00" stroke-width="0.5"
+                                opacity="0.4" />
+                            <!-- Slim shoulders -->
+                            <ellipse cx="65" cy="68" rx="14" ry="9" fill="url(#opGrad2)" />
+                            <ellipse cx="135" cy="68" rx="14" ry="9" fill="url(#opGrad2)" />
+                            <!-- Arms -->
+                            <path d="M51 70 L48 135 L60 137 L65 78 Z" fill="url(#opGrad2)" />
+                            <path d="M149 70 L152 135 L140 137 L135 78 Z" fill="url(#opGrad2)" />
+                            <!-- Sniper rifle -->
+                            <rect x="140" y="70" width="55" height="4" rx="1" fill="#555"
+                                transform="rotate(-25, 140, 70)" />
+                            <rect x="170" y="55" width="4" height="12" rx="1" fill="#444"
+                                transform="rotate(-25, 170, 55)" />
+                            <circle cx="190" cy="52" r="5" stroke="#ffaa00" stroke-width="1" fill="none" opacity="0.6"
+                                transform="rotate(-25, 190, 52)" />
+                            <!-- Legs -->
+                            <path d="M78 145 L74 215 L68 242 L88 242 L90 215 L96 152 Z" fill="url(#opGrad2)" />
+                            <path d="M104 152 L110 215 L112 242 L132 242 L126 215 L122 145 Z" fill="url(#opGrad2)" />
+                            <!-- Boots -->
+                            <path d="M65 238 L90 238 L90 255 Q78 260 65 255 Z" fill="#1a1100" />
+                            <path d="M110 238 L135 238 L135 255 Q122 260 110 255 Z" fill="#1a1100" />
+                            <!-- Glow accents -->
+                            <circle cx="100" cy="80" r="2" fill="#ffaa00" opacity="0.8">
+                                <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s"
+                                    repeatCount="indefinite" />
+                            </circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="operator-info">
+                    <h3 class="operator-name">SPECTRE</h3>
+                    <p class="operator-codename">// CALLSIGN: S-02</p>
+                    <div class="operator-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Attack</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="95"></div>
+                            </div>
+                            <span class="stat-value">95</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Defense</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="45"></div>
+                            </div>
+                            <span class="stat-value">45</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Speed</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="72"></div>
+                            </div>
+                            <span class="stat-value">72</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Ability</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="88"></div>
+                            </div>
+                            <span class="stat-value">88</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OPERATOR 3 — TITAN -->
+            <div class="operator-card reveal">
+                <div class="operator-img-wrapper">
+                    <span class="operator-role">Heavy</span>
+                    <div class="operator-visual">
+                        <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="opGrad3" x1="40" y1="0" x2="160" y2="280">
+                                    <stop stop-color="#ff3300" stop-opacity="0.9" />
+                                    <stop offset="0.5" stop-color="#990000" stop-opacity="0.7" />
+                                    <stop offset="1" stop-color="#330000" stop-opacity="0.5" />
+                                </linearGradient>
+                                <filter id="opGlow3">
+                                    <feGaussianBlur stdDeviation="4" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Heavy helmet -->
+                            <path d="M72 28 Q100 2 128 28 L135 58 Q100 65 65 58 Z" fill="url(#opGrad3)"
+                                filter="url(#opGlow3)" />
+                            <rect x="78" y="38" width="44" height="10" rx="3" fill="#ff3300" opacity="0.8" />
+                            <!-- Massive torso -->
+                            <path
+                                d="M55 60 L48 140 Q48 158 62 162 L82 168 L100 172 L118 168 L138 162 Q152 158 152 140 L145 60 Q100 52 55 60Z"
+                                fill="url(#opGrad3)" filter="url(#opGlow3)" />
+                            <!-- Chest armor plate -->
+                            <path d="M70 75 L100 68 L130 75 L128 120 L100 128 L72 120 Z" fill="#1a0000" stroke="#ff3300"
+                                stroke-width="1.5" opacity="0.5" />
+                            <!-- Massive shoulder pads -->
+                            <ellipse cx="48" cy="75" rx="24" ry="16" fill="url(#opGrad3)" stroke="#ff3300"
+                                stroke-width="1" />
+                            <ellipse cx="152" cy="75" rx="24" ry="16" fill="url(#opGrad3)" stroke="#ff3300"
+                                stroke-width="1" />
+                            <!-- Thick arms -->
+                            <path d="M24 78 L18 145 L38 148 L48 88 Z" fill="url(#opGrad3)" />
+                            <path d="M176 78 L182 145 L162 148 L152 88 Z" fill="url(#opGrad3)" />
+                            <!-- Minigun -->
+                            <rect x="170" y="115" width="28" height="5" rx="2" fill="#555" />
+                            <rect x="170" y="122" width="28" height="5" rx="2" fill="#555" />
+                            <rect x="170" y="129" width="28" height="5" rx="2" fill="#555" />
+                            <rect x="165" y="112" width="8" height="25" rx="1" fill="#444" />
+                            <circle cx="200" cy="124" r="6" stroke="#ff3300" stroke-width="1" fill="none"
+                                opacity="0.5" />
+                            <!-- Thick legs -->
+                            <path d="M62 162 L56 225 L48 248 L78 248 L82 225 L92 172 Z" fill="url(#opGrad3)" />
+                            <path d="M108 172 L118 225 L122 248 L152 248 L144 225 L138 162 Z" fill="url(#opGrad3)" />
+                            <!-- Heavy boots -->
+                            <path d="M44 244 L82 244 L82 268 Q63 274 44 268 Z" fill="#1a0000" />
+                            <path d="M118 244 L156 244 L156 268 Q137 274 118 268 Z" fill="#1a0000" />
+                            <!-- Glowing elements -->
+                            <circle cx="100" cy="95" r="4" fill="#ff3300" opacity="0.8">
+                                <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite" />
+                            </circle>
+                            <rect x="72" y="155" width="56" height="2" fill="#ff3300" opacity="0.4" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="operator-info">
+                    <h3 class="operator-name">TITAN</h3>
+                    <p class="operator-codename">// CALLSIGN: T-03</p>
+                    <div class="operator-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Attack</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="98"></div>
+                            </div>
+                            <span class="stat-value">98</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Defense</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="95"></div>
+                            </div>
+                            <span class="stat-value">95</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Speed</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="30"></div>
+                            </div>
+                            <span class="stat-value">30</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Ability</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="70"></div>
+                            </div>
+                            <span class="stat-value">70</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OPERATOR 4 — PHANTOM -->
+            <div class="operator-card reveal">
+                <div class="operator-img-wrapper">
+                    <span class="operator-role">Recon</span>
+                    <div class="operator-visual">
+                        <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="opGrad4" x1="60" y1="0" x2="140" y2="280">
+                                    <stop stop-color="#888888" stop-opacity="0.8" />
+                                    <stop offset="0.5" stop-color="#444444" stop-opacity="0.6" />
+                                    <stop offset="1" stop-color="#111111" stop-opacity="0.4" />
+                                </linearGradient>
+                                <filter id="opGlow4">
+                                    <feGaussianBlur stdDeviation="2" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Stealth hood -->
+                            <path d="M78 22 Q100 5 122 22 L126 50 Q100 55 74 50 Z" fill="url(#opGrad4)"
+                                filter="url(#opGlow4)" />
+                            <!-- Angular visor -->
+                            <path d="M82 35 L118 35 L115 42 L85 42 Z" fill="#ff1a1a" opacity="0.85" />
+                            <!-- Sleek torso -->
+                            <path
+                                d="M73 52 L70 128 Q70 140 78 143 L90 148 L100 150 L110 148 L122 143 Q130 140 130 128 L127 52 Q100 48 73 52Z"
+                                fill="url(#opGrad4)" />
+                            <!-- Stealth lines -->
+                            <line x1="85" y1="60" x2="85" y2="135" stroke="#ff1a1a" stroke-width="0.5" opacity="0.3" />
+                            <line x1="100" y1="55" x2="100" y2="140" stroke="#ff1a1a" stroke-width="0.5"
+                                opacity="0.3" />
+                            <line x1="115" y1="60" x2="115" y2="135" stroke="#ff1a1a" stroke-width="0.5"
+                                opacity="0.3" />
+                            <!-- Slim shoulders -->
+                            <ellipse cx="66" cy="62" rx="14" ry="8" fill="url(#opGrad4)" />
+                            <ellipse cx="134" cy="62" rx="14" ry="8" fill="url(#opGrad4)" />
+                            <!-- Arms -->
+                            <path d="M52 65 L48 130 L60 132 L66 72 Z" fill="url(#opGrad4)" />
+                            <path d="M148 65 L152 130 L140 132 L134 72 Z" fill="url(#opGrad4)" />
+                            <!-- Dual pistols -->
+                            <rect x="38" y="125" width="18" height="5" rx="1" fill="#555"
+                                transform="rotate(10, 38, 125)" />
+                            <rect x="44" y="120" width="5" height="10" rx="1" fill="#444"
+                                transform="rotate(10, 44, 120)" />
+                            <rect x="144" y="125" width="18" height="5" rx="1" fill="#555"
+                                transform="rotate(-10, 144, 125)" />
+                            <rect x="152" y="120" width="5" height="10" rx="1" fill="#444"
+                                transform="rotate(-10, 152, 120)" />
+                            <!-- Legs -->
+                            <path d="M78 143 L74 215 L70 240 L88 240 L90 215 L96 150 Z" fill="url(#opGrad4)" />
+                            <path d="M104 150 L110 215 L112 240 L130 240 L126 215 L122 143 Z" fill="url(#opGrad4)" />
+                            <!-- Boots -->
+                            <path d="M68 236 L90 236 L90 252 Q79 256 68 252 Z" fill="#1a1a1a" />
+                            <path d="M110 236 L132 236 L132 252 Q121 256 110 252 Z" fill="#1a1a1a" />
+                            <!-- Red accent glows -->
+                            <circle cx="100" cy="70" r="2" fill="#ff1a1a" opacity="0.7">
+                                <animate attributeName="opacity" values="0.3;0.9;0.3" dur="1.8s"
+                                    repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="88" cy="62" r="1" fill="#ff1a1a" opacity="0.5" />
+                            <circle cx="112" cy="62" r="1" fill="#ff1a1a" opacity="0.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="operator-info">
+                    <h3 class="operator-name">PHANTOM</h3>
+                    <p class="operator-codename">// CALLSIGN: P-04</p>
+                    <div class="operator-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Attack</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="68"></div>
+                            </div>
+                            <span class="stat-value">68</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Defense</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="55"></div>
+                            </div>
+                            <span class="stat-value">55</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Speed</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="96"></div>
+                            </div>
+                            <span class="stat-value">96</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Ability</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="90"></div>
+                            </div>
+                            <span class="stat-value">90</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OPERATOR 5 — VALKYRIE -->
+            <div class="operator-card reveal">
+                <div class="operator-img-wrapper">
+                    <span class="operator-role">Medic</span>
+                    <div class="operator-visual">
+                        <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="opGrad5" x1="60" y1="0" x2="140" y2="280">
+                                    <stop stop-color="#ffffff" stop-opacity="0.7" />
+                                    <stop offset="0.4" stop-color="#ff1a1a" stop-opacity="0.6" />
+                                    <stop offset="1" stop-color="#330000" stop-opacity="0.4" />
+                                </linearGradient>
+                                <filter id="opGlow5">
+                                    <feGaussianBlur stdDeviation="3" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Slim tactical helmet -->
+                            <path d="M80 24 Q100 8 120 24 L124 50 Q100 56 76 50 Z" fill="url(#opGrad5)"
+                                filter="url(#opGlow5)" />
+                            <rect x="84" y="35" width="32" height="7" rx="3" fill="#ff1a1a" opacity="0.9" />
+                            <!-- Medical cross on helmet -->
+                            <rect x="96" y="22" width="8" height="16" fill="#ff1a1a" opacity="0.7" />
+                            <rect x="92" y="26" width="16" height="8" fill="#ff1a1a" opacity="0.7" />
+                            <!-- Torso -->
+                            <path
+                                d="M72 55 L69 128 Q69 140 78 142 L90 146 L100 148 L110 146 L122 142 Q131 140 131 128 L128 55 Q100 50 72 55Z"
+                                fill="url(#opGrad5)" />
+                            <!-- Medical pack on chest -->
+                            <rect x="88" y="80" width="24" height="30" rx="2" fill="#1a0000" stroke="#ff1a1a"
+                                stroke-width="1" opacity="0.5" />
+                            <rect x="97" y="84" width="6" height="22" fill="#ff1a1a" opacity="0.4" />
+                            <rect x="91" y="92" width="18" height="6" fill="#ff1a1a" opacity="0.4" />
+                            <!-- Shoulders -->
+                            <ellipse cx="64" cy="66" rx="15" ry="9" fill="url(#opGrad5)" />
+                            <ellipse cx="136" cy="66" rx="15" ry="9" fill="url(#opGrad5)" />
+                            <!-- Arms -->
+                            <path d="M49 68 L46 130 L58 132 L64 75 Z" fill="url(#opGrad5)" />
+                            <path d="M151 68 L154 130 L142 132 L136 75 Z" fill="url(#opGrad5)" />
+                            <!-- SMG in right hand -->
+                            <rect x="145" y="118" width="22" height="5" rx="1" fill="#555" />
+                            <rect x="148" y="112" width="5" height="12" rx="1" fill="#444" />
+                            <!-- Medical device in left hand -->
+                            <rect x="32" y="120" width="16" height="12" rx="2" fill="#333" stroke="#ff1a1a"
+                                stroke-width="0.5" />
+                            <circle cx="40" cy="126" r="3" fill="#ff1a1a" opacity="0.6">
+                                <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s"
+                                    repeatCount="indefinite" />
+                            </circle>
+                            <!-- Legs -->
+                            <path d="M78 142 L74 212 L70 238 L88 238 L90 212 L96 148 Z" fill="url(#opGrad5)" />
+                            <path d="M104 148 L110 212 L112 238 L130 238 L126 212 L122 142 Z" fill="url(#opGrad5)" />
+                            <!-- Boots -->
+                            <path d="M68 234 L90 234 L90 250 Q79 254 68 250 Z" fill="#1a0000" />
+                            <path d="M110 234 L132 234 L132 250 Q121 254 110 250 Z" fill="#1a0000" />
+                            <!-- Biosensor glows -->
+                            <circle cx="82" cy="100" r="1.5" fill="#ff1a1a" opacity="0.8">
+                                <animate attributeName="opacity" values="0.4;1;0.4" dur="0.8s"
+                                    repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="118" cy="100" r="1.5" fill="#ff1a1a" opacity="0.8">
+                                <animate attributeName="opacity" values="0.4;1;0.4" dur="0.8s" repeatCount="indefinite"
+                                    begin="0.4s" />
+                            </circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="operator-info">
+                    <h3 class="operator-name">VALKYRIE</h3>
+                    <p class="operator-codename">// CALLSIGN: V-05</p>
+                    <div class="operator-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Attack</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="60"></div>
+                            </div>
+                            <span class="stat-value">60</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Defense</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="70"></div>
+                            </div>
+                            <span class="stat-value">70</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Speed</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="75"></div>
+                            </div>
+                            <span class="stat-value">75</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Ability</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="98"></div>
+                            </div>
+                            <span class="stat-value">98</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OPERATOR 6 — HAVOC -->
+            <div class="operator-card reveal">
+                <div class="operator-img-wrapper">
+                    <span class="operator-role">Demolitions</span>
+                    <div class="operator-visual">
+                        <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="opGrad6" x1="50" y1="0" x2="150" y2="280">
+                                    <stop stop-color="#ff6600" stop-opacity="0.9" />
+                                    <stop offset="0.5" stop-color="#cc3300" stop-opacity="0.7" />
+                                    <stop offset="1" stop-color="#331100" stop-opacity="0.5" />
+                                </linearGradient>
+                                <filter id="opGlow6">
+                                    <feGaussianBlur stdDeviation="3" result="blur" />
+                                    <feMerge>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Blast helmet with face guard -->
+                            <path d="M74 25 Q100 4 126 25 L132 55 Q100 62 68 55 Z" fill="url(#opGrad6)"
+                                filter="url(#opGlow6)" />
+                            <rect x="80" y="35" width="40" height="12" rx="2" fill="#1a0800" opacity="0.7" />
+                            <rect x="82" y="38" width="36" height="5" rx="2" fill="#ffaa00" opacity="0.8" />
+                            <!-- Heavy torso -->
+                            <path
+                                d="M60 60 L55 135 Q55 150 68 155 L85 160 L100 163 L115 160 L132 155 Q145 150 145 135 L140 60 Q100 53 60 60Z"
+                                fill="url(#opGrad6)" filter="url(#opGlow6)" />
+                            <!-- Explosive belt -->
+                            <rect x="70" y="128" width="60" height="10" rx="2" fill="#331100" stroke="#ff6600"
+                                stroke-width="1" opacity="0.6" />
+                            <circle cx="82" cy="133" r="3" fill="#ffaa00" opacity="0.5" />
+                            <circle cx="100" cy="133" r="3" fill="#ffaa00" opacity="0.5" />
+                            <circle cx="118" cy="133" r="3" fill="#ffaa00" opacity="0.5" />
+                            <!-- Big shoulder pads -->
+                            <ellipse cx="52" cy="72" rx="20" ry="14" fill="url(#opGrad6)" stroke="#ff6600"
+                                stroke-width="0.5" />
+                            <ellipse cx="148" cy="72" rx="20" ry="14" fill="url(#opGrad6)" stroke="#ff6600"
+                                stroke-width="0.5" />
+                            <!-- Arms -->
+                            <path d="M32 75 L28 140 L42 142 L52 84 Z" fill="url(#opGrad6)" />
+                            <path d="M168 75 L172 140 L158 142 L148 84 Z" fill="url(#opGrad6)" />
+                            <!-- Shotgun -->
+                            <rect x="158" y="108" width="35" height="6" rx="2" fill="#555"
+                                transform="rotate(-8, 158, 108)" />
+                            <rect x="162" y="100" width="6" height="16" rx="1" fill="#444"
+                                transform="rotate(-8, 162, 100)" />
+                            <!-- Legs -->
+                            <path d="M68 155 L62 222 L55 245 L80 245 L84 222 L92 163 Z" fill="url(#opGrad6)" />
+                            <path d="M108 163 L116 222 L120 245 L145 245 L138 222 L132 155 Z" fill="url(#opGrad6)" />
+                            <!-- Heavy boots -->
+                            <path d="M52 241 L82 241 L82 262 Q67 268 52 262 Z" fill="#1a0800" />
+                            <path d="M118 241 L148 241 L148 262 Q133 268 118 262 Z" fill="#1a0800" />
+                            <!-- Warning glowing elements -->
+                            <polygon points="96,72 100,65 104,72" fill="#ffaa00" opacity="0.8">
+                                <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite" />
+                            </polygon>
+                            <line x1="100" y1="74" x2="100" y2="79" stroke="#ffaa00" stroke-width="2" opacity="0.8" />
+                            <circle cx="100" cy="82" r="1" fill="#ffaa00" opacity="0.8" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="operator-info">
+                    <h3 class="operator-name">HAVOC</h3>
+                    <p class="operator-codename">// CALLSIGN: H-06</p>
+                    <div class="operator-stats">
+                        <div class="stat-row">
+                            <span class="stat-label">Attack</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="90"></div>
+                            </div>
+                            <span class="stat-value">90</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Defense</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="85"></div>
+                            </div>
+                            <span class="stat-value">85</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Speed</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="50"></div>
+                            </div>
+                            <span class="stat-value">50</span>
+                        </div>
+                        <div class="stat-row">
+                            <span class="stat-label">Ability</span>
+                            <div class="stat-bar">
+                                <div class="stat-bar-fill" data-width="92"></div>
+                            </div>
+                            <span class="stat-value">92</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Neon Divider -->
+    <div style="padding: 0 3rem;">
+        <div class="neon-divider"></div>
+    </div>
+
+    <!-- CTA -->
+    <section class="section" style="text-align:center;">
+        <div class="section-header reveal">
+            <span class="section-label">// GEAR UP</span>
+            <h2 class="section-title">CHECK THE <span class="highlight">ARSENAL</span></h2>
+            <p class="section-desc" style="margin-bottom:3rem;">Your operator is only as good as their weapons. Explore
+                the full weapon catalog.</p>
+            <a href="arsenal.html" class="cta-btn">VIEW ARSENAL</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">BattleNova Ops</div>
+                <p>The ultimate tactical warfare experience. Built for the elite. Designed for domination.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Navigate</h4>
+                <a href="index.html">Home</a>
+                <a href="operators.html">Operators</a>
+                <a href="arsenal.html">Arsenal</a>
+            </div>
+            <div class="footer-column">
+                <h4>Community</h4>
+                <a href="#">Discord</a>
+                <a href="#">Forums</a>
+                <a href="#">Stream Hubs</a>
+            </div>
+            <div class="footer-column">
+                <h4>Game</h4>
+                <a href="#">Patch Notes</a>
+                <a href="#">Roadmap</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BattleNova Ops. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg></a>
+                <a href="#" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg></a>
+                <a href="#" aria-label="Discord"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z" />
+                    </svg></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

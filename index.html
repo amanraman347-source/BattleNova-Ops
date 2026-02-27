@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BattleNova Ops — An ultra-intense futuristic tactical shooter. Dominate. Destroy. Survive.">
+  <title>BattleNova Ops — Dominate. Destroy. Survive.</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body class="animated-bg">
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Page Transition -->
+  <div class="page-transition" id="pageTransition"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">BattleNova</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="operators.html" class="nav-link">Operators</a></li>
+      <li><a href="arsenal.html" class="nav-link">Arsenal</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-subtitle">// SEASON 01 — OPERATION FIRESTORM</p>
+
+      <h1 class="hero-title glitch" data-text="BATTLENOVA">
+        <span class="title-battle">BATTLE</span>
+        <span class="title-nova">NOVA</span>
+        <span class="title-ops">O P S</span>
+      </h1>
+
+      <p class="hero-tagline">
+        <span>DOMINATE.</span> <span>DESTROY.</span> <span>SURVIVE.</span>
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#features" class="cta-btn" id="ctaPlay">PLAY NOW</a>
+        <a href="operators.html" class="cta-btn-secondary">MEET THE OPERATORS</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+      <span>Scroll Down</span>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES SECTION ===================== -->
+  <div class="section-divider">
+    <div class="divider-line"></div>
+  </div>
+
+  <section class="section section-dark" id="features">
+    <div class="section-header reveal">
+      <span class="section-label">// WHY BATTLENOVA</span>
+      <h2 class="section-title">UNLEASH THE <span class="highlight">FURY</span></h2>
+      <p class="section-desc">Enter a warzone where only the strongest survive. Tactical combat meets explosive action in the most intense battlefield ever built.</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 5L55 20V40L30 55L5 40V20L30 5Z" stroke="url(#grad1)" stroke-width="2" fill="none"/>
+            <path d="M30 15L45 24V38L30 47L15 38V24L30 15Z" fill="rgba(255,26,26,0.15)" stroke="url(#grad1)" stroke-width="1"/>
+            <circle cx="30" cy="30" r="5" fill="#ff1a1a" filter="url(#glow)"/>
+            <defs>
+              <linearGradient id="grad1" x1="5" y1="5" x2="55" y2="55">
+                <stop stop-color="#ff1a1a"/><stop offset="1" stop-color="#ffaa00"/>
+              </linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+          </svg>
+        </div>
+        <h3>Tactical Combat</h3>
+        <p>Every decision matters. Plan your approach, coordinate with your squad, and execute with precision in dynamic combat zones.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="40" height="40" stroke="url(#grad2)" stroke-width="2" rx="2" fill="none"/>
+            <line x1="10" y1="30" x2="50" y2="30" stroke="url(#grad2)" stroke-width="1" opacity="0.5"/>
+            <line x1="30" y1="10" x2="30" y2="50" stroke="url(#grad2)" stroke-width="1" opacity="0.5"/>
+            <circle cx="30" cy="30" r="8" stroke="#ff1a1a" stroke-width="2" fill="none"/>
+            <circle cx="30" cy="30" r="3" fill="#ffaa00" filter="url(#glow2)"/>
+            <defs>
+              <linearGradient id="grad2" x1="10" y1="10" x2="50" y2="50">
+                <stop stop-color="#ff1a1a"/><stop offset="1" stop-color="#ffaa00"/>
+              </linearGradient>
+              <filter id="glow2"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+          </svg>
+        </div>
+        <h3>Elite Operators</h3>
+        <p>Choose from specialized operatives, each with unique abilities, tactical gear, and devastating combat skills designed for domination.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card reveal">
+        <div class="feature-icon">
+          <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30 5L35 20H50L38 30L42 45L30 35L18 45L22 30L10 20H25L30 5Z" fill="rgba(255,26,26,0.15)" stroke="url(#grad3)" stroke-width="2"/>
+            <circle cx="30" cy="28" r="4" fill="#ffaa00" filter="url(#glow3)"/>
+            <defs>
+              <linearGradient id="grad3" x1="10" y1="5" x2="50" y2="45">
+                <stop stop-color="#ffaa00"/><stop offset="1" stop-color="#ff1a1a"/>
+              </linearGradient>
+              <filter id="glow3"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+          </svg>
+        </div>
+        <h3>Ranked Warfare</h3>
+        <p>Climb the global leaderboard in competitive ranked matches. Prove your skill in the most punishing battlefields across the world.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS SECTION ===================== -->
+  <section class="section stats-section">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-number" data-count="50">0</div>
+        <div class="stat-text">Elite Operators</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-count="120">0</div>
+        <div class="stat-text">Weapons & Mods</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-count="30">0</div>
+        <div class="stat-text">Battle Maps</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-number" data-count="10">0</div>
+        <div class="stat-text">Game Modes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA SECTION ===================== -->
+  <section class="section section-dark" style="text-align:center;">
+    <div class="section-header reveal">
+      <span class="section-label">// ENTER THE WARZONE</span>
+      <h2 class="section-title">ARE YOU <span class="highlight">READY?</span></h2>
+      <p class="section-desc" style="margin-bottom:3rem;">The battlefield awaits. Choose your operator. Load your arsenal. Enter the fray.</p>
+      <a href="operators.html" class="cta-btn">JOIN THE FIGHT</a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">BattleNova Ops</div>
+        <p>The ultimate tactical warfare experience. Built for the elite. Designed for domination.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Navigate</h4>
+        <a href="index.html">Home</a>
+        <a href="operators.html">Operators</a>
+        <a href="arsenal.html">Arsenal</a>
+      </div>
+      <div class="footer-column">
+        <h4>Community</h4>
+        <a href="#">Discord</a>
+        <a href="#">Forums</a>
+        <a href="#">Stream Hubs</a>
+      </div>
+      <div class="footer-column">
+        <h4>Game</h4>
+        <a href="#">Patch Notes</a>
+        <a href="#">Roadmap</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 BattleNova Ops. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" aria-label="Twitter">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="#" aria-label="Discord">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
